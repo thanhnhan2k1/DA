@@ -179,12 +179,12 @@ public class UserController {
 		user.setAddress(address);
 		user.setName(name);
 		user.setPhone(phone);
-		User u=rest.postForObject(url+"/user/updateInfor", user, User.class);
-		if(u==null) {
+		int u=rest.postForObject(url+"/user/updateInfor", user, Integer.class);
+		if(u==0) {
 			model.addAttribute("result","fail");
 		}else {
 			model.addAttribute("result", "success");
-			session.setAttribute("user", u);
+			session.setAttribute("user", user);
 		}
 		return "updateInfor.html";
 	}
