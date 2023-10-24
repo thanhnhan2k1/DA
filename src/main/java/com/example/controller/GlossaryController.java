@@ -12,7 +12,7 @@ import com.example.model.GlossaryPagination;
 @RequestMapping("/glossary")
 public class GlossaryController {
 	private RestTemplate rest=new RestTemplate();
-	private String url="http://localhost:8082";
+	//private String url="http://localhost:8082";
 	private String url="https://server-production-004b.up.railway.app";
 	@GetMapping("/get")
 	private String getAll(Model model, @RequestParam(name="pageNum", defaultValue = "1", required = false) int pageNum,
