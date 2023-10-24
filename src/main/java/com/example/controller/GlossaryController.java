@@ -13,7 +13,7 @@ import com.example.model.GlossaryPagination;
 public class GlossaryController {
 	private RestTemplate rest=new RestTemplate();
 	private String url="http://localhost:8082";
-	//private String url="https://da-server2-production.up.railway.app";
+	private String url="https://server-production-004b.up.railway.app";
 	@GetMapping("/get")
 	private String getAll(Model model, @RequestParam(name="pageNum", defaultValue = "1", required = false) int pageNum,
 			@RequestParam(name="sortField", defaultValue = "vietnamese", required = false)String sortField,
