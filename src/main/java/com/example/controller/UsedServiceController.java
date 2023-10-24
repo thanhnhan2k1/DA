@@ -102,6 +102,6 @@ public class UsedServiceController {
 		model.addAttribute("vnp_ResponseCode", request.getParameter("vnp_ResponseCode"));
 		model.addAttribute("vnp_BankCode", request.getParameter("vnp_BankCode"));
 		//System.out.println(tran.getAmount());
-		return "resultPayment.html";
+		return "resultpayment.html";
 	}
 }
