@@ -14,7 +14,7 @@ import com.example.model.Contact;
 public class ContactController {
 	private RestTemplate rest=new RestTemplate();
 	private String url="http://localhost:8082";
-	//private String url="https://da-server2-production.up.railway.app";
+	private String url="https://server-production-004b.up.railway.app";
 	
 	@GetMapping
 	private String getContact(Model model) {
