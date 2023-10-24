@@ -29,8 +29,8 @@ import jakarta.websocket.Session;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-	private String url="http://localhost:8082";
-	//private String url="https://da-server2-production.up.railway.app";
+	//private String url="http://localhost:8082";
+	private String url="https://server-production-004b.up.railway.app";
 	private RestTemplate rest=new RestTemplate();
 	@GetMapping("/register")
 	private String register(Model model){
