@@ -28,8 +28,8 @@ import jakarta.servlet.http.HttpSession;
 @RequestMapping("/wood")
 public class WoodController {
 	private RestTemplate rest = new RestTemplate();
-	private String url1="http://localhost:8082";
-	//private String url1="https://da-server2-production.up.railway.app";
+	//private String url1="http://localhost:8082";
+	private String url1="https://server-production-004b.up.railway.app";
 	@GetMapping("/get")
 	private String get(
 			@RequestParam(name="category", defaultValue = "1", required = false)int category,
