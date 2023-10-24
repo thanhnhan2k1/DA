@@ -59,9 +59,9 @@ public class UsedServiceController {
 	@GetMapping("/payment")
 	private void payemnt(@RequestParam(name="serviceId")int idService, HttpSession session, HttpServletResponse response) throws IOException {
 		User user=(User) session.getAttribute("user");
-		user=new User();
-		user.setId(13);
-		user.setName("ccdhc");
+		// user=new User();
+		// user.setId(13);
+		// user.setName("ccdhc");
 		List<Service>listService=(List<Service>) session.getAttribute("listService");
 		Service service=new Service();
 		for(Service s:listService) {
@@ -77,7 +77,7 @@ public class UsedServiceController {
 		usedService.setStatus("PENDING");
 		usedService.setTypePayment("VNPAY");
 		Calendar cal = Calendar.getInstance();
-//		cal.add(Calendar.HOUR_OF_DAY, 7);
+		cal.add(Calendar.HOUR_OF_DAY, 7);
 		usedService.setDateStart(cal.getTime());
 		cal.add(Calendar.MONTH, service.getDuration());
 		usedService.setDateEnd(cal.getTime());
